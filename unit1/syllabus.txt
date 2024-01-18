@@ -1,0 +1,34 @@
+event planning and management 
+
+Unit-1
+
+Introduction to Events
+Features of an Event
+Practices in Event Management
+
+
+Augmented reality 
+
+Introduction of Virtual Reality: Fundamental Concept and Components of Virtual Reality. Primary Features and Present Development on Virtual Reality. cc in Virtual Reality: Input -- Tracker, Sensor, Digital Glove, Movement Capture, Video-based Input, 3D Menus & 3DScanner etc. Output -- Visual /Auditory / Haptic Devices.
+
+Human Computer Interaction 
+
+Foundations of HCI: 
+
+The Human: I/O channels – memory, reasoning and problem solving; The computer: Devices, memory – processing and networks; Interaction: Models, frameworks, ergonomics, styles, elements and interactivity, paradigms
+
+Digital Image Processing 
+
+Unit I: Fundamentals of Image processing 15 Contact Hours 
+
+Shape 
+
+Introduction to Image Processing 
+
+Images, Pixels, Image resolution, PPI and DPI, Bitmap Images, lossless compressions, lossy compression, Image file formats, color spaces, Advance Image concepts. 
+
+Basics of Python and Scikit image 
+
+Basics of Python, Scikit image, rotating shifting and scaling Image, Determining structural similarity. 
+
+
