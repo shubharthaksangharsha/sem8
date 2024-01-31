@@ -1,0 +1,62 @@
+Introduction to Image Processing:
+Image processing is the manipulation of images through various methods such as filtering, enhancement, segmentation, compression, etc., to 
+achieve specific goals like improving the quality, removing noise, or extracting meaningful information. It plays a crucial role in various
+fields like computer vision, medical imaging, remote sensing, biometrics, and more.
+
+Images, Pixels, Image resolution, PPI and DPI:
+An image is a representation of an object or a scene as a two-dimensional array of pixels. Each pixel represents the color or intensity at 
+that specific point in the image. Image resolution refers to the level of detail that can be shown in an image. It is measured in pixels 
+per inch (PPI) for digital images and lines per millimeter (lpm or lpi) for printed images. PPI stands for Pixels Per Inch, while DPI (Dots
+Per Inch) was historically used to indicate the resolution of printers. However, with the growth of digital media, the terms have become 
+interchangeable in common usage.
+
+Bitmap Images:
+Bitmap images, also known as raster graphics or simply bitmaps, are digital images that use a grid of pixels to represent the image. They 
+can be saved in various formats such as BMP, JPEG, PNG, GIF, etc. Bitmap images can suffer from resolution dependence because they do not 
+have the ability to resize without losing quality or introducing artifacts.
+
+Lossless Compressions:
+Lossless compression is a type of image compression that allows for the exact reproduction of the original image after decompression. It 
+achieves this by identifying redundant data and patterns within the image, and then encoding and compressing the data accordingly. Some 
+common lossless formats include PNG (Portable Network Graphics) and TIFF (Tagged Image File Format).
+
+Lossy Compression:
+Lossy compression, on the other hand, involves the removal of certain details from an image to reduce its file size. This is done by 
+discarding information that is less significant or can be reconstructed without significantly impacting the overall quality of the image. 
+JPEG (Joint Photographic Experts Group) and WebP are examples of lossy compression formats.
+
+Image File Formats:
+There are various image file formats, each with its own advantages and disadvantages. Some common ones include:
+
+1. JPG/JPEG - A popular format for storing photographs due to its high compression ratio, but it suffers from loss of quality during 
+compression.
+2. PNG - Supports both lossless (compressed) and semi-lossy (filtered) compression, making it suitable for images with text or intricate 
+details.
+3. GIF - Primarily used for simple images like logos, icons, or cartoons due to its limited color palette and is known for supporting 
+animations.
+4. BMP - A uncompressed format that retains the original image quality but has larger file sizes.
+5. TIFF - Offers high-quality images and supports both lossless and lossy compression, making it ideal for professional use.
+
+Color Spaces:
+A color space defines the range of colors that can be represented in an image. The most common color spaces are RGB (Red, Green, Blue) and 
+CMYK (Cyan, Magenta, Yellow, Black). While RGB is more suitable for digital media as it represents colors additively, CMYK is better suited
+for printing purposes since it uses subtractive processes.
+
+Advanced Image Concepts:
+Advanced image processing techniques include topics like morphological operations, filtering (median, Gaussian), segmentation 
+(thresholding, region-growing), feature detection (Sobel, Canny edge detectors, etc.), and more. These concepts are useful in various 
+applications such as object recognition, face detection, document analysis, medical imaging, remote sensing, and more.
+
+Basics of Python and Scikit image:
+Python is a popular high-level programming language that offers simple syntax, easy readability, and extensive libraries. It provides a 
+solid platform for image processing tasks due to its flexibility and powerful packages like NumPy, Pandas, and Matplotlib. Among these, 
+Scikit-image (Scikit-image) is a significant package used for various image processing functions. Some basic functions include loading 
+images using the `imread()` function, performing rotations, shifts, and scaling with the `transform()`, and `similarity_transforms()` 
+functions.
+
+Determining structural similarity:
+Structural Similarity (SSIM) is a method used to measure the perceptual quality of images or videos. It compares two images and evaluates 
+their structural similarity by considering three factors - luminance, contrast, and structure. SSIM can be useful in applications like 
+image compression, denoising, or video coding where preserving image quality is important. In Python, the SSIM function from Scikit-image 
+package can be used to determine structural similarity between two images.
+

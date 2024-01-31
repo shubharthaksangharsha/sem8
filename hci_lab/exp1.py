@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import simpledialog  # Import simpledialog explicitly
 
 
 class HomeApplianceInterface:

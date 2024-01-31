@@ -1,85 +1,83 @@
 import tkinter as tk
+from tkinter import messagebox, simpledialog
+import random
 
-class HomeApplianceInterface:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Tinker Home Appliance Interface by Shubharthak")
+class Child:
+    def __init__(self, name):
+        self.name = name
+        self.preferences = []
+        self.interests = []
 
-        # Entry widget for user input
-        self.user_input = tk.Entry(root, width=20, font=('Arial', 14))
-        self.user_input.grid(row=0, column=0, padx=10, pady=10)
+    def add_preference(self, preference):
+        self.preferences.append(preference)
 
-        # Initialize buttons with larger size and font size
-        button_width = 20
-        button_height = 10
-        button_font = ('Arial', 18)
-        # Submit button
-        self.submit_button = tk.Button(root, text="Submit", command=self.process_input, width=button_width, height=button_height, font=('Arial', 16))
-        self.submit_button.grid(row=0, column=1, padx=10, pady=10)
+    def add_interest(self, interest):
+        self.interests.append(interest)
 
+class MathAppGUI:
+    def __init__(self, master):
+        self.master = master
+        self.master.title("Math App for Children")
         
+        self.children = []
+        self.current_child = None
         
+        self.create_widgets()
 
-        self.light_button = tk.Button(root, text="Light On", command=self.lights_on, width=button_width, height=button_height, font=button_font)
-        self.fan_button = tk.Button(root, text="Fan On", command=self.fan_on, width=button_width, height=button_height, font=button_font)
-        self.door_button = tk.Button(root, text="Lights OFF", command=self.lights_off, width=button_width, height=button_height, font=button_font)
-        self.ac_button = tk.Button(root, text="Fan OFF", command=self.fan_off, width=button_width, height=button_height, font=button_font)
-        self.custom_button1 = tk.Button(root, text="AC On", command=self.ac_on, width=button_width, height=button_height, font=button_font)
-        self.custom_button2 = tk.Button(root, text="AC Off", command=self.ac_off, width=button_width, height=button_height, font=button_font)
+    def create_widgets(self):
+        self.label = tk.Label(self.master, text="Enter Child's Name:",font=('Arial', 22, 'bold'))
+        self.label.pack()
 
-        # Grid layout for buttons
-        self.light_button.grid(row=1, column=0, padx=10, pady=10)
-        self.fan_button.grid(row=1, column=1, padx=10, pady=10)
-        self.door_button.grid(row=0, column=2, padx=10, pady=10)
-        self.ac_button.grid(row=1, column=2, padx=10, pady=10)
-        self.custom_button1.grid(row=0, column=3, padx=10, pady=10)
-        self.custom_button2.grid(row=1, column=3, padx=10, pady=10)
+        self.entry_name = tk.Entry(self.master, borderwidth=2, width=30, font=('Arial', 18))
+        self.entry_name.pack()
 
-    def process_input(self):
-        user_value = self.user_input.get()
-        # Check user input and perform corresponding action
-        if user_value == '0':
-            self.lights_on()
+        self.button_register = tk.Button(self.master, text="Register Child", command=self.register_child,font=('Arial', 22, 'bold'))
+        self.button_register.pack()
 
-        if user_value == '1':
-            self.lights_off()
+        self.button_teach_math = tk.Button(self.master, text="Teach Math", state=tk.DISABLED, command=self.teach_math,font=('Arial', 22, 'bold'))
+        self.button_teach_math.pack()
 
-        if user_value == '2':
-            self.fan_on()
+        self.button_analyze_behavior = tk.Button(self.master, text="Analyze Behavior", state=tk.DISABLED, command=self.analyze_behavior,font=('Arial', 22, 'bold'))
+        self.button_analyze_behavior.pack()
 
-        if user_value == '3':
-            self.fan_off()
-        
-        if user_value == '4':
-            self.ac_on()
+    def register_child(self):
+        name = self.entry_name.get()
+        if name:
+            child = Child(name)
+            self.children.append(child)
+            self.current_child = child
+            self.button_teach_math["state"] = tk.NORMAL
+            self.button_analyze_behavior["state"] = tk.NORMAL
+            messagebox.showinfo("Success", f"Child {name} registered successfully.")
+        else:
+            messagebox.showwarning("Warning", "Please enter a valid name.")
 
-        if user_value == '5':
-            self.ac_off()
+    def teach_math(self):
+        num1 = random.randint(1, 10)
+        num2 = random.randint(1, 10)
+        answer = num1 + num2
 
+        response = simpledialog.askinteger("Math Question", f"What is {num1} + {num2}?")
 
-    def lights_on(self):
-        print("Lights On!")
-    def lights_off(self):
-        print("Lights OFF!")
+        if response == answer:
+            messagebox.showinfo("Correct", "Well done! That's correct.")
+        else:
+            messagebox.showinfo("Incorrect", f"Oops! The correct answer is {answer}.")
 
-    def fan_on(self):
-        print("Fan On!")
+    def analyze_behavior(self):
+        preference = simpledialog.askstring("Preference", "Enter child's preference:")
+        interest = simpledialog.askstring("Interest", "Enter child's interest:")
 
-    def fan_off(self):
-        print("Fan OFF!")
+        if preference:
+            self.current_child.add_preference(preference)
 
-    def ac_on(self):
-        print("AC On!")
-    
-    def ac_off(self):
-        print("AC OFF!")
+        if interest:
+            self.current_child.add_interest(interest)
 
-    
+        messagebox.showinfo("Analysis", "Behavior analysis complete.")
+
 if __name__ == "__main__":
     root = tk.Tk()
-    app = HomeApplianceInterface(root)
-
-    root.geometry("1280x720")
-
+    app = MathAppGUI(root)
+    root.geometry('800x720')
     root.mainloop()
-

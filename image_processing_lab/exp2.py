@@ -31,7 +31,7 @@ def main():
         if 'exit' in of:
             print('thank you for using...')
             break
-        input_path = "pic.jpeg"
+        input_path = "scenery.png"
         output_path_pil = f"output_pil.{of.lower()}"
         output_path_matplotlib = f"output_matplotlib.{of.lower()}"
         output_path_scikit = f"output_scikit.{of.lower()}"
