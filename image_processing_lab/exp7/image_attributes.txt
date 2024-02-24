@@ -1,0 +1,2 @@
+Image shape: (360, 639, 3)
+Image data type: uint8

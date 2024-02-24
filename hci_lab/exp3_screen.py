@@ -33,7 +33,7 @@ def remind_medication():
         # Here you can implement the logic to fetch medication reminders
         # For simplicity, I'll just display a message box with dummy data
         message = f"Patient ID: {patient_id}\nDisease: {disease_name}\nReminder: Take medication X, Y, Z."
-        messagebox.showinfo("Medication Reminder", message, icon='warning', width=600, height=300)
+        messagebox.showinfo("Medication Reminder", message, icon='warning')
     else:
         messagebox.showwarning("Missing Information", "Please enter Patient ID and Disease Name.")
 
@@ -48,13 +48,13 @@ def send_mail():
         messagebox.showwarning("Missing Information", "Please enter Patient ID and Disease Name.")
 
 # Create the main window
-root = tk.Tk()
+root = tk.Toplevel()
 root.title("Patient ID Reminder App")
 root.geometry('640x480')
 
 # Load and resize background image
 bg_image = Image.open("background.png")  # Replace "background_image.jpg" with your image file
-bg_image = bg_image.resize((root.winfo_width(), root.winfo_height()), Image.ANTIALIAS)  # Resize image to fit window
+bg_image = bg_image.resize((root.winfo_width(), root.winfo_height()), Image.LANCZOS)  # Resize image to fit window
 
 # Convert image to Tkinter format
 background_image = ImageTk.PhotoImage(bg_image)

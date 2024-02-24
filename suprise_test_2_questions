@@ -1,0 +1,27 @@
+Give answers to the following Questions:- 
+Section A ( 2 Marks) 
+
+Q1. List the steps involved in the Image processing pipeline 
+Q2: Explain the primary function of image I/O in Python 
+Q3: Describe Some common basic image manipulations 
+Q4: Python libraries that can be used for image input output 
+Q5: Highlight the importance of image normalization
+Q6: Explain basic image manipulations that can be done using python 
+Q7: State the purpose of Sampling in image formation 
+Q8: Explain FFT and DFT in image processing 
+Q9:  How does the quantization affect the quality of an image 
+Q10: Explain the significance of Fourier Transform in image processing 
+Q11: How is image resolution related to sampling frequency 
+Q12: Explain the difference between Spatial Domain and Frequency domain in image processing 
+Q13: Write the basic steps involved in image formation using FFT and DFT 
+Q14: Name some common image file formats that used Quantization 
+Q15: Role of discrete Fourier Transform in image processing 
+Q16: How can you display an image using Python 
+Q17: How does Python images input/output library helps in handling different image format 
+Q18: Create a simple image processing pipeline using Python 
+Q19: How do you apply an basic image manipulation like resizing, rotatin an image in Python 
+Q20: Describe the process of image formation based on sampling and quantization. Based on Quantization, how does it relates to Discrete fourier transformation and Fast fourier transformation 
+Q21: Explain the concept of image enhancement based on pixel transformation. How does it differ from Image smoothening techniques  
+Q22: Explain the concept of image derivatives using Gradients. How do gradients help in  detecting edges and other features in an image. 
+Q23: How do Morphological operations like Erosion, Dilation, Opening and closing help in image enhancecment and feature extraction. 
+
