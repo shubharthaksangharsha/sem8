@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Shubharthak's Shop - Your One-Stop Shop for Tech Products</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-xmMcN3eN/AakIa6Sy90VqnFwUgOjtNp5p02s77Fq0YlH0WVxStcIRaAyGwn3k02Q" crossorigin="anonymous">
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="sign-in"><a href="#">Sign In</a></li>
+                    <li class="register"><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>Welcome to Shubharthak's Shop</h1>
+                <p>Your One-Stop Shop for Tech Products</p>
+                <ul class="actions">
+                    <li><a href="#products" class="button scrolly">Explore Products</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="wrapper style2 spotlights">
+            <!-- Product 1: Laptop -->
+            <section>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Laptop</h2>
+                        <p>Powerful laptops for all your computing needs.</p>
+                        <p>Price: $1000</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button addToCart" data-product="Laptop">Add to Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product 2: Smartphone -->
+            <section>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Smartphone</h2>
+                        <p>Stay connected with the latest smartphones.</p>
+                        <p>Price: $700</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button addToCart" data-product="Smartphone">Add to Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product 3: Headphones -->
+            <section>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Headphones</h2>
+                        <p>Immerse yourself in music with premium headphones.</p>
+                        <p>Price: $150</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button addToCart" data-product="Headphones">Add to Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add more product sections as needed -->
+
+        </section>
+
+        <!-- About Us -->
+        <section id="about" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing high-quality tech products to our customers.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Contact Us</h2>
+                <div class="split style1">
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <p>+1 (123) 456-7890</p>
+                            </li>
+                            <li>
+                                <h3>Address</h3>
+                                <p>123 Tech Street, Silicon Valley, USA</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="wrapper style1-alt">
+            <div class="inner">
+                <ul class="menu">
+                    <li>&copy; Shubharthak's Shop. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $(".addToCart").click(function () {
+                    var productName = $(this).data("product");
+                    alert(productName + " has been added to the cart!");
+                });
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
